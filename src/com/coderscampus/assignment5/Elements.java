@@ -2,11 +2,13 @@ package com.coderscampus.assignment5;
 
 public class Elements {
 
-	public void addElementsToList(int numberOfElements, CustomList<String> myCustomList) {
-		String element = "element ";
+	String element = "element ";
+
+	public void addElementsToCustomList(int numberOfElements, CustomList<String> aList) {
 		int i = 2;
-		while (i < numberOfElements + 2) {
-			myCustomList.add(element + String.valueOf(i));
+		while (i < (numberOfElements + 2)) {
+			aList.add(element + String.valueOf(i));
+			i++;
 		}
 	}
 
