@@ -20,6 +20,15 @@ public class CustomListApplication {
 			System.out.println(myCustomList.get(i));
 		}
 			
+		System.out.println("---------------");
+		
+		
+		// instantiation additional CustomArrayList for further testing
+		CustomList<String> myAlexList = new CustomArrayList<>();
+		myAlexList.add("hi");
+		for (int i=0; i<myAlexList.getSize(); i++) {
+			System.out.println(myAlexList.get(i));
+		}
 		
 		
 		
