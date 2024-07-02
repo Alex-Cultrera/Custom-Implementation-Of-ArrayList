@@ -9,8 +9,13 @@ public class CustomListApplication {
 		// test by instantiating the CustomArrayList class and inserting elements into it
 		CustomList<String> myCustomList = new CustomArrayList<>();
 		myCustomList.add("element 1");
+		// instantiation of additional CustomArrayList for further testing
+		CustomList<String> myShoppingList = new CustomArrayList<>();
+		myShoppingList.add("eggs");
+		myShoppingList.add("fruit");
+		myShoppingList.add("milk");
 		
-		// and continue to add another 10, 20 or 40 more elements
+		// and continue to add another 10, 20 or 40 more elements to myCustomList
 		// method to quickly add multiple elements to the CustomArrayList
 		Elements elements = new Elements();
 		elements.addElementsToCustomList(10, myCustomList);
@@ -21,25 +26,9 @@ public class CustomListApplication {
 		}
 			
 		System.out.println("---------------");
-		
-		
-		// instantiation of additional CustomArrayList for further testing
-		CustomList<String> myAlexList = new CustomArrayList<>();
-		myAlexList.add("element 10");
-		myAlexList.add("element 20");
-		myAlexList.add("element 30");
-		myAlexList.add("element 40");
-		myAlexList.add("element 50");
-		myAlexList.add("element 60");
-		myAlexList.add("element 70");
-		myAlexList.add("element 80");
-		myAlexList.add("element 90");
-		myAlexList.add("element 100");
-	
-		for (int i=0; i<myAlexList.getSize(); i++) {
-			System.out.println(myAlexList.get(i));
+							
+		for (int i=0; i<myShoppingList.getSize(); i++) {
+			System.out.println(myShoppingList.get(i));
 		}
-
-	
 	}
 }

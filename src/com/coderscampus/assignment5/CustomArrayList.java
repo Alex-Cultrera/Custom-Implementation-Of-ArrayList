@@ -3,7 +3,6 @@ package com.coderscampus.assignment5;
 public class CustomArrayList<T> implements CustomList<T> {
 	Object[] myItems = new Object[10];
 	int myItemOrderOfInsertion;
-	
 
 	public Object[] getMyItems() {
 		return myItems;
@@ -20,18 +19,17 @@ public class CustomArrayList<T> implements CustomList<T> {
 	public void setMyItemOrderOfInsertion(int myItemOrderOfInsertion) {
 		this.myItemOrderOfInsertion = myItemOrderOfInsertion;
 	}
-
 	
 	// method to double size of array
-		private void growItemsArray(int previousSize, Object[] anArray) {
-			int i=0;
-			Object[] newItemsArray = new Object[previousSize*2];
-			while (i<previousSize) {
-				newItemsArray[i]=anArray[i];
-				i++;
-			}
-			setMyItems(newItemsArray);
+	public void growItemsArray(int previousSize, Object[] anArray) {
+		int i=0;
+		Object[] newItemsArray = new Object[previousSize*2];
+		while (i<previousSize) {
+			newItemsArray[i]=anArray[i];
+			i++;
 		}
+		setMyItems(newItemsArray);
+	}
 				
 	@Override
 	public boolean add(T item) {
@@ -39,27 +37,27 @@ public class CustomArrayList<T> implements CustomList<T> {
 		Object[] newItems = getMyItems();
 		int arrayLength=newItems.length;
 		int count=0;
-		// check if array is completely empty (null at all indexes) 
 		while (i<arrayLength) {
 			if(newItems[i]==null) {	
 				count++;
 			}
 			i++;
 		}
-		// check if array has reached capacity and double array size if so
+		// check if array has reached capacity and double array size if true
 		if (count==0) {
 			growItemsArray(arrayLength, newItems);
 		}
-		// confirm array is empty and place item at first index
+		// check if array is completely empty (null at all indexes) and place item at first index if true
 		if (count==arrayLength) {
 			newItems[0]=item;
 			myItemOrderOfInsertion=0;
 			setMyItemOrderOfInsertion(myItemOrderOfInsertion);
 			}
-		// confirm array is not empty and place item at next available index
+		// place item at next available index
 		else {
+			newItems=getMyItems();
 			myItemOrderOfInsertion++;
-			newItems[myItemOrderOfInsertion]=item;
+			newItems[getMyItemOrderOfInsertion()]=item;
 		}
 		return false;
 	}
@@ -81,5 +79,4 @@ public class CustomArrayList<T> implements CustomList<T> {
 		}
 		return null;
 	}
-	
 }

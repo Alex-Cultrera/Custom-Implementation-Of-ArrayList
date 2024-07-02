@@ -6,10 +6,11 @@ public class Elements {
 
 	public void addElementsToCustomList(int numberOfElements, CustomList<String> aList) {
 		CustomArrayList<String> aCustomList = new CustomArrayList<>();
-		int i = 2; 
+		aCustomList=(CustomArrayList<String>) aList;
+		int i = 2;
 		int elementNumber; 
 		while (i < (numberOfElements + 2)) { 
-			elementNumber = aCustomList.getMyItemOrderOfInsertion() + i;
+			elementNumber = aCustomList.getMyItemOrderOfInsertion() + 2;
 			aList.add(element + String.valueOf(elementNumber));
 			i++;
 		}
