@@ -23,14 +23,23 @@ public class CustomListApplication {
 		System.out.println("---------------");
 		
 		
-		// instantiation additional CustomArrayList for further testing
+		// instantiation of additional CustomArrayList for further testing
 		CustomList<String> myAlexList = new CustomArrayList<>();
-		myAlexList.add("hi");
+		myAlexList.add("element 10");
+		myAlexList.add("element 20");
+		myAlexList.add("element 30");
+		myAlexList.add("element 40");
+		myAlexList.add("element 50");
+		myAlexList.add("element 60");
+		myAlexList.add("element 70");
+		myAlexList.add("element 80");
+		myAlexList.add("element 90");
+		myAlexList.add("element 100");
+	
 		for (int i=0; i<myAlexList.getSize(); i++) {
 			System.out.println(myAlexList.get(i));
 		}
-		
-		
-		
+
+	
 	}
 }

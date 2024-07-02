@@ -9,7 +9,7 @@ public class Elements {
 		int i = 2; 
 		int elementNumber; 
 		while (i < (numberOfElements + 2)) { 
-			elementNumber = aCustomList.getItemOrderOfInsertion() + 2;
+			elementNumber = aCustomList.getMyItemOrderOfInsertion() + i;
 			aList.add(element + String.valueOf(elementNumber));
 			i++;
 		}
