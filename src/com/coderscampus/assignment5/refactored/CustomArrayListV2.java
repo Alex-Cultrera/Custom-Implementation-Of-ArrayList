@@ -21,6 +21,7 @@ public class CustomArrayListV2<T> implements CustomListV2<T> {
 		return size;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public T get(int index) {
 		return (T) myItems[index];
