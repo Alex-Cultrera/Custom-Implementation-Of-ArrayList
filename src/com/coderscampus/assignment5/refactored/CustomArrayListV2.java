@@ -11,7 +11,7 @@ public class CustomArrayListV2<T> implements CustomListV2<T> {
 		if (size == myItems.length) {
 			myItems = Arrays.copyOf(myItems, myItems.length * 2);
 		}
-		myItems[size] = myItems;
+		myItems[size] = item;
 		size++;
 		return true;
 	}
